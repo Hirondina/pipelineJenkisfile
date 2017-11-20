@@ -8,8 +8,7 @@ pipeline {
     }
     stage('Test') {
       steps {
-        sh ''' bat \'make check || true\' 
- junit \'**/target/*.xml\' '''
+        bat 'echo \'make check || true\'   junit \'**/target/*.xml\''
       }
     }
     stage('Deploy') {
