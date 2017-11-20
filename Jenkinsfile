@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        bat 'bat \'make\'  archiveArtifacts artifacts: \'**/target/*.jar\', fingerprint: true '
+        bat 'echo \'make\'  archiveArtifacts artifacts: \'**/target/*.jar\', fingerprint: true '
       }
     }
     stage('Test') {
